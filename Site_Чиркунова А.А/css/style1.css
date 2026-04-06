@@ -1,0 +1,389 @@
+:root {
+  --bg: #faf7f5;
+  --line: #e5e5e5;
+  --muted: #bababa;
+  --text: #444444;
+  --white: #ffffff;
+  --footer-text: #eeeeee;
+  --footer-bg: #444444;
+  --container: 1200px;
+  --gutter: 24px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg);
+  overflow-x: hidden;
+  font-family: Helvetica, Arial, sans-serif;
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container {
+  width: min(100%, var(--container));
+  margin: 0 auto;
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 78px));
+  gap: var(--gutter);
+  justify-content: center;
+}
+
+
+.site-header {
+  padding: 36px 0 26px;
+  align-items: center;
+}
+
+.menu-link {
+  grid-column: 1 / span 2;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 140%;
+  align-self: center;
+}
+
+.brand {
+  grid-column: 5 / span 4;
+  text-align: center;
+  font-size: 20px;
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 140%;
+  align-self: center;
+  text-transform: uppercase;
+}
+
+.brand span {
+  letter-spacing: 0.45em;
+  padding-left: 0.45em;
+}
+
+.header-icons {
+  grid-column: 10 / span 3;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: end;
+  align-items: center;
+  gap: 22px;
+}
+
+.icon-btn,
+.cart-btn {
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+.header-icons button {
+  cursor: pointer;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-size: 12px;
+  font-family: Gilroy, Helvetica, Arial, sans-serif;
+  color: #444444;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #444444;
+  transition: opacity 0.2s ease;
+}
+
+.breadcrumbs a:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs .divider {
+  margin: 0 4px;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+}
+
+.badge {
+  position: absolute;
+  top: -7px;
+  right: -9px;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--text);
+  color: var(--white);
+  font-size: 10px;
+  display: grid;
+  place-items: center;
+}
+
+.divider {
+  border-top: 1px solid var(--line);
+  margin-bottom: 28px;
+}
+
+main.container {
+  padding-bottom: 80px;
+}
+
+.breadcrumbs {
+  margin-bottom: 24px;
+}
+
+.breadcrumbs span {
+  font-size: 12px;
+  font-family: Gilroy, Helvetica, Arial, sans-serif;
+  color: #444444;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.tabs {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  font-size: 12px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #bababa;
+  font-weight: 400;
+  line-height: 140%;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.tab:hover,
+.tab:active,
+.tab:focus-visible {
+  color: #444444;
+}
+
+.tab.active {
+  color: #444444;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -12px;
+}
+
+.product-card {
+  width: 25%;
+  padding: 0 12px 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-wrapper {
+  position: relative;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+.image-wrapper img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.product-card__wish .wish-icon {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.2s ease;
+}
+
+.product-card__wish .wish-icon--base {
+  opacity: 1;
+}
+
+.product-card__wish .wish-icon--active {
+  opacity: 0;
+}
+
+.product-card__wish:hover {
+  background: rgba(68, 68, 68, 0.06);
+  transform: translateY(-1px);
+}
+
+.product-card__wish:hover .wish-icon--base,
+.product-card__wish:active .wish-icon--base,
+.product-card__wish:focus-visible .wish-icon--base {
+  opacity: 0;
+}
+
+.product-card__wish:hover .wish-icon--active,
+.product-card__wish:active .wish-icon--active,
+.product-card__wish:focus-visible .wish-icon--active {
+  opacity: 1;
+}
+
+.product-title {
+  font-size: 25px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #444444;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -0.06em;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #444444;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.site-footer {
+  background-color: var(--footer-bg);
+  padding: 68px 0 88px;
+}
+
+.footer-brand {
+  grid-column: 1 / span 2;
+  font-size: 20px;
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: 0.45em;
+  padding-left: 0.45em;
+  text-transform: uppercase;
+}
+
+.footer-contact {
+  grid-column: 3 / span 4;
+  display: grid;
+  gap: 10px;
+}
+
+.footer-links--service {
+  grid-column: 8 / span 3;
+}
+
+.footer-phone,
+.footer-nav span {
+  cursor: default;
+  transition: opacity 0.2s ease;
+}
+
+.footer-links--about {
+  grid-column: 11 / span 2;
+}
+
+.footer-title {
+  font-size: 25px;
+  color: var(--white);
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -0.06em;
+}
+
+.footer-links {
+  display: grid;
+  gap: 18px;
+}
+
+.footer-nav {
+  display: grid;
+  gap: 12px;
+}
+
+.footer-nav span {
+  font-size: 16px;
+  color: var(--footer-text);
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.site-footer .container {
+  align-items: start;
+  color: var(--white);
+}
+
+.footer-phone {
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.06em;
+}
+
+.footer-note {
+  font-size: 12px;
+  color: var(--footer-text);
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: 0;
+}
+
+.footer-phone:hover,
+.footer-nav span:hover {
+  opacity: 0.7;
+}
+
+
+@media (max-width: 1024px) {
+  .product-card {
+    width: 33.33%;
+  }
+}
+
+@media (max-width: 820px) {
+  .product-card {
+    width: 50%;
+  }
+}
+
+@media (max-width: 560px) {
+  .product-card {
+    width: 100%;
+  }
+}
