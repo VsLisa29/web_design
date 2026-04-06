@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+body {
+    background-color: #faf7f5;
+    overflow-x: hidden;
+    color: #444444;
+    margin: 0;
+    padding: 0;
+}
+
+.site-header {
+    padding: 36px 0 26px;
+}
+
+.menu-link {
+    font-size: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #444444;
+    font-weight: 400;
+    line-height: 139.9999976158142%;
+    letter-spacing: 0;
+    text-decoration: none;
+}
+
+.brand {
+    font-size: 20px;
+    font-family: Inter, Helvetica, Arial, sans-serif;
+    color: #444444;
+    font-weight: 500;
+    line-height: 139.9999976158142%;
+    letter-spacing: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.header-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 22px;
+}
+
+.header-icon-btn {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+.divider {
+    border-top: 1px solid #e5e5e5;
+    margin-bottom: 28px;
+}
+
+.breadcrumb-custom {
+    font-size: 12px;
+    font-family: 'Gilroy', 'Helvetica', Arial, sans-serif;
+    color: #444444;
+    font-weight: 400;
+    line-height: 139.9999976158142%;
+    letter-spacing: 0;
+}
+
+.breadcrumb-custom span {
+    color: #bababa;
+    text-transform: uppercase;
+    font-family: 'Helvetica', Arial, sans-serif;
+}
+
+.category-label {
+    font-size: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #bababa;
+    font-weight: 400;
+    line-height: 139.9999976158142%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.product-title {
+    font-size: 62px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #444444;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+}
+
+.product-desc {
+    font-size: 16px;
+    font-family: 'Gilroy', 'Helvetica', Arial, sans-serif;
+    color: #444444;
+    font-weight: 400;
+    line-height: 120.00000476837158%;
+    letter-spacing: 0;
+}
+
+.volume-label {
+    font-size: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #444444;
+    font-weight: 400;
+    line-height: 139.9999976158142%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.volume-options {
+    display: flex;
+    gap: 8px;
+}
+
+.volume-option {
+    font-size: 16px;
+    font-family: 'Gilroy', 'Helvetica', Arial, sans-serif;
+    color: #444444;
+    font-weight: 400;
+    letter-spacing: 0;
+    border: 2px solid #e5e5e5;
+    padding: 8px 16px;
+    cursor: pointer;
+    background: transparent;
+    min-width: 60px;
+    text-align: center;
+}
+
+.volume-option.active {
+    border-color: #bababa;
+}
+
+.price-main {
+    font-size: 35px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #444444;
+    font-weight: 400;
+    line-height: 120.00000476837158%;
+    letter-spacing: -0.06em;
+}
+
+.btn-add-cart {
+    background-color: #444444;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 139.9999976158142%;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0;
+    padding: 18px 40px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-add-cart:hover,
+.btn-add-cart:active,
+.btn-add-cart.in-cart {
+    background-color: #bababa;
+    color: #ffffff;
+}
+
+.btn-fav-square {
+    width: 78px;
+    height: 78px;
+    border: none;
+    background: #444444;
+    display: grid;
+    place-items: center;
+    position: relative;
+    padding: 0;
+    cursor: pointer;
+}
+
+.btn-fav-square .wish-icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.2s ease;
+}
+
+.btn-fav-square .wish-icon--base {
+    opacity: 1;
+}
+
+.btn-fav-square .wish-icon--active {
+    opacity: 0;
+}
+
+.btn-fav-square:hover .wish-icon--base,
+.btn-fav-square:active .wish-icon--base,
+.btn-fav-square:focus-visible .wish-icon--base {
+    opacity: 0;
+}
+
+.btn-fav-square:hover .wish-icon--active,
+.btn-fav-square:active .wish-icon--active,
+.btn-fav-square:focus-visible .wish-icon--active {
+    opacity: 1;
+}
+
+.section-recommend-title {
+    font-size: 75px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #444444;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.06em;
+}
+
+.section-recommend {
+    margin-top: 150px;
+}
+
+.recommend-up {
+    margin-top: 60px;
+}
+
+.recommend-down {
+    margin-top: 210px;
+}
+
+.card-title-custom {
+    font-size: 25px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #444444;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.06em;
+}
+
+.card-price-custom {
+    font-size: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #444444;
+    font-weight: 400;
+    line-height: 120.00000476837158%;
+    letter-spacing: 0;
+}
+
+.site-footer {
+    background-color: #444444;
+    padding: 68px 0 88px;
+    color: #ffffff;
+}
+
+.footer-brand {
+    font-size: 20px;
+    font-family: Inter, Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: 0.45em;
+    padding-left: 0.45em;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 48px;
+}
+
+.footer-phone {
+    font-size: 35px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 120.00000476837158%;
+    letter-spacing: -0.06em;
+    cursor: default;
+    transition: opacity 0.2s ease;
+}
+
+.footer-note {
+    font-size: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #eeeeee;
+    font-weight: 400;
+    line-height: 129.99999523162842%;
+    letter-spacing: 0;
+    margin: 0;
+}
+
+.footer-title {
+    font-size: 25px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.06em;
+    margin-bottom: 18px;
+}
+
+.footer-nav span {
+    display: block;
+    font-size: 16px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #eeeeee;
+    font-weight: 400;
+    line-height: 100%;
+    margin-bottom: 12px;
+    cursor: default;
+    transition: opacity 0.2s ease;
+}
+
+.footer-phone:hover,
+.footer-nav span:hover {
+    opacity: 0.7;
+}
+
+.product-main-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.product-thumb-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-img-top-custom {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.product-card__wish {
+    position: relative;
+    justify-self: end;
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    transition: background 0.25s ease, transform 0.25s ease;
+    border: none;
+    background: transparent;
+}
+
+.product-card__wish .wish-icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.2s ease;
+}
+
+.product-card__wish .wish-icon--base {
+    opacity: 1;
+}
+
+.product-card__wish .wish-icon--active {
+    opacity: 0;
+}
+
+.product-card__wish:hover {
+    background: rgba(68, 68, 68, 0.06);
+    transform: translateY(-1px);
+}
+
+.product-card__wish:hover .wish-icon--base,
+.product-card__wish:active .wish-icon--base,
+.product-card__wish:focus-visible .wish-icon--base {
+    opacity: 0;
+}
+
+.product-card__wish:hover .wish-icon--active,
+.product-card__wish:active .wish-icon--active,
+.product-card__wish:focus-visible .wish-icon--active {
+    opacity: 1;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
